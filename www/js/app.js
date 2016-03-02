@@ -1,35 +1,56 @@
-// Ionic Starter App
-
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-
-// angular.module('starter', ['ionic'])
-
-// .run(function($ionicPlatform) {
-//   $ionicPlatform.ready(function() {
-//     if(window.cordova && window.cordova.plugins.Keyboard) {
-//       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-//       // for form inputs)
-//       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-
-//       // Don't remove this line unless you know what you are doing. It stops the viewport
-//       // from snapping when text inputs are focused. Ionic handles this internally for
-//       // a much nicer keyboard experience.
-//       cordova.plugins.Keyboard.disableScroll(true);
-//     }
-//     if(window.StatusBar) {
-//       StatusBar.styleDefault();
-//     }
-//   });
-// })
 angular.module('precip', ['ionic'])
   .controller('PrecipCtrl', function($scope, $http) {
-    $scope.dan = "balls";
     $http.get('json/mplsweatherprecip.json')
+    // $http.get('json/mplsweather.json')
       .success(function(data) {
-        $scope.data = data.currently;
+        // $scope.data = data.currently;
+        var rawdata = data.currently;
+        preciplogic(rawdata);
+        precipiconlogic(rawdata);
       });
+    preciplogic = function (data) {
+      if (data.precipIntensity !== 0) {
+        $scope.isPrecip = "YOU KNOW IT - " + data.precipType.toUpperCase();
+      }
+      else {
+        $scope.isPrecip = "nahhhh, it's just " + data.summary.toLowerCase();
+      }
+    }
+    precipiconlogic = function (data) {
+      if (data.icon ===  "clear-day") {
+        $scope.icon = "wi-day-sunny";
+      }
+      else if (data.icon === "clear-night") {
+        $scope.icon = "wi-night-clear";
+      }
+      else if (data.icon === "rain") {
+        $scope.icon = "wi-day-rain";
+      }
+      else if (data.icon === "snow") {
+        $scope.icon = "wi-day-snow";
+      }
+      else if (data.icon === "sleet") {
+        $scope.icon = "wi-day-sleet";
+      }
+      else if (data.icon === "wind") {
+        $scope.icon = "wi-day-windy";
+      }
+      else if (data.icon === "fog") {
+        $scope.icon = "wi-day-fog";
+      }
+      else if (data.icon === "cloudy") {
+        $scope.icon = "wi-day-cloudy";
+      }
+      else if (data.icon === "partly-cloudy-day") {
+        $scope.icon = "wi-day-sunny-overcast";
+      }
+      else if (data.icon === "partly-cloudy-night") {
+        $scope.icon = "wi-night-alt-cloudy";
+      }
+      else {
+        $scope.icon = "wi-day-sunny";
+      }
+    }
   })
   .directive('precipDirective', function() {
     return {
@@ -37,3 +58,16 @@ angular.module('precip', ['ionic'])
       controller: 'PrecipCtrl'
     }
   });
+
+
+
+// clear-day   =>  wi-day-sunny
+// clear-night   =>  wi-night-clear
+// rain   =>  wi-day-rain
+// snow   =>  wi-day-snow
+// sleet   =>  wi-day-sleet
+// wind   =>  wi-day-windy
+// fog   =>  wi-day-fog
+// cloudy   =>  wi-day-cloudy
+// partly-cloudy-day   =>  wi-day-sunny-overcast
+// partly-cloudy-night   =>  wi-night-alt-cloudy

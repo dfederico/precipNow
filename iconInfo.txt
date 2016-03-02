@@ -1,0 +1,16 @@
+icon: A machine-readable text summary of this data point, suitable for selecting an icon for display. If defined, this property will have one of the following values: 
+
+
+clear-day   =>  wi-day-sunny
+clear-night   =>  wi-night-clear
+rain   =>  wi-day-rain
+snow   =>  wi-day-snow
+sleet   =>  wi-day-sleet
+wind   =>  wi-day-windy
+fog   =>  wi-day-fog
+cloudy   =>  wi-day-cloudy
+partly-cloudy-day   =>  wi-day-sunny-overcast
+partly-cloudy-night   =>  wi-night-alt-cloudy
+
+
+(Developers should ensure that a sensible default is defined, as additional values, such as hail, thunderstorm, or tornado, may be defined in the future.)

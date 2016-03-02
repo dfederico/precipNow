@@ -1,1 +1,15 @@
 /* Empty. Add your own CSS if you like */
+span, p, div {
+	font-family:"Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+}
+
+
+.body-content {
+	margin-top:63px;
+}
+.precip-content {
+	text-align:center;
+}
+.icon:before {
+	/*font-size:260px;*/
+}
