@@ -1,20 +1,30 @@
 angular.module('precip', ['ionic'])
   .controller('PrecipCtrl', function($scope, $http) {
-    $scope.dan = "balls";
     $http.get('json/mplsweatherprecip.json')
+    // $http.get('json/mplsweather.json')
       .success(function(data) {
-        $scope.data = data.currently;
-        // $scope.icon = data.currently.icon;
+        // $scope.data = data.currently;
         var rawdata = data.currently;
         preciplogic(rawdata);
         precipiconlogic(rawdata);
       });
+
+      // navigator.geolocation.getCurrentPosition(
+      //   function(position) {
+      //     // $scope.lat = position.coords.latitude;
+      //     // $scope.long = position.coords.longitude;
+      //     $scope.position = position;
+      //   },
+      //   function() {
+      //     $scope.position = "it all failed";
+      //   });
+
     preciplogic = function (data) {
       if (data.precipIntensity !== 0) {
-        $scope.isPrecip = "YOU KNOW IT " + data.precipType;
+        $scope.isPrecip = "YOU KNOW IT - " + data.precipType.toUpperCase();
       }
       else {
-        $scope.isPrecip = "nahhhh, just " + data.summary;
+        $scope.isPrecip = "nahhhh, it's just " + data.summary.toLowerCase();
       }
     }
     precipiconlogic = function (data) {

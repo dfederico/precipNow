@@ -24,6 +24,9 @@
         },
         "ionic-plugin-keyboard": {
             "PACKAGE_NAME": "com.ionicframework.ionprecip948423"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.ionicframework.ionprecip948423"
         }
     },
     "dependent_plugins": {}
