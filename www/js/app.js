@@ -1,21 +1,11 @@
-angular.module('precip', ['ionic'])
-  .controller('PrecipCtrl', function($scope, $http) {
+angular.module('precip', ['ionic', 'ngCordova'])
+  .controller('PrecipCtrl', function($scope, $http, $cordovaGeolocation) {
     ionic.Platform.ready(function(){
     // will execute when device is ready, or immediately if the device is already ready.
       console.log("now ready");
-
-      // navigator.geolocation.getCurrentPosition(disp);
-
-      // function disp(pos) {
-      //   // $scope.lat = pos.coords.latitude;
-      //   // $scope.long = pos.coords.longitude;
-      //   console.log(pos.coords.latitude);
-      // }
-
       $http.get('json/mplsweatherprecip.json')
     // $http.get('json/mplsweather.json')
       .success(function(data) {
-        // $scope.data = data.currently;
         var rawdata = data.currently;
         preciplogic(rawdata);
         precipiconlogic(rawdata);
@@ -30,13 +20,22 @@ angular.module('precip', ['ionic'])
         }
       }
       $scope.clicker = function () {
-        navigator.geolocation.getCurrentPosition(disp);
+        console.log("clicker clicked");
 
-        function disp(pos) {
-          // $scope.lat = pos.coords.latitude;
-          // $scope.long = pos.coords.longitude;
-          console.log(pos.coords.latitude);
-        }
+        var posOptions = {
+          enableHighAccuracy: true,
+          timeout: 20000,
+          maximumAge: 0
+        };
+
+        $cordovaGeolocation.getCurrentPosition(posOptions).then(function (position) {
+          var lat  = position.coords.latitude;
+          var long = position.coords.longitude;
+          console.log(lat, long);
+        }, function(err) {
+            // $ionicLoading.hide();
+            console.log(err);
+        });
       }
       precipiconlogic = function (data) {
         if (data.icon ===  "clear-day") {
