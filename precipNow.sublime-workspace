@@ -1,0 +1,661 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cord",
+				"cordovaGeolocation"
+			],
+			[
+				"ionic",
+				"ionicPlatform"
+			],
+			[
+				"long",
+				"longitude"
+			],
+			[
+				"get",
+				"getCurrentPosition"
+			],
+			[
+				"partly",
+				"partly-cloudy-night"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"trina",
+				"trinaRedPineApple"
+			],
+			[
+				"backg",
+				"background-repeat"
+			],
+			[
+				"en",
+				"endwhile"
+			],
+			[
+				"category",
+				"category_name"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "www/js/app.js",
+			"settings":
+			{
+				"buffer_size": 2938,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/index.html",
+			"settings":
+			{
+				"buffer_size": 1621,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "www/partials/precipDirective.html",
+			"settings":
+			{
+				"buffer_size": 505,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "platforms/android/AndroidManifest.xml",
+			"settings":
+			{
+				"buffer_size": 1594,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "\n      // navigator.geolocation.getCurrentPosition(\n      //   function(position) {\n      //     // $scope.lat = position.coords.latitude;\n      //     // $scope.long = position.coords.longitude;\n      //     $scope.position = position;\n      //   },\n      //   function() {\n      //     $scope.position = \"it all failed\";\n      //   });\n\n\n\n// Ionic Starter App\n\n// angular.module is a global place for creating, registering and retrieving Angular modules\n// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)\n// the 2nd parameter is an array of 'requires'\n\n// angular.module('starter', ['ionic'])\n\n// .run(function($ionicPlatform) {\n//   $ionicPlatform.ready(function() {\n//     if(window.cordova && window.cordova.plugins.Keyboard) {\n//       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard\n//       // for form inputs)\n//       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);\n\n//       // Don't remove this line unless you know what you are doing. It stops the viewport\n//       // from snapping when text inputs are focused. Ionic handles this internally for\n//       // a much nicer keyboard experience.\n//       cordova.plugins.Keyboard.disableScroll(true);\n//     }\n//     if(window.StatusBar) {\n//       StatusBar.styleDefault();\n//     }\n//   });\n// })",
+			"settings":
+			{
+				"buffer_size": 1366,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "pack",
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/dfed/Sites/precipNowIonic",
+		"/Users/dfed/Sites/precipNowIonic/plugins",
+		"/Users/dfed/Sites/precipNowIonic/www",
+		"/Users/dfed/Sites/precipNowIonic/www/js",
+		"/Users/dfed/Sites/precipNowIonic/www/lib",
+		"/Users/dfed/Sites/precipNowIonic/www/lib/ionic",
+		"/Users/dfed/Sites/precipNowIonic/www/lib/ionic/js"
+	],
+	"file_history":
+	[
+		"/Users/dfed/Sites/geolocationdemo/www/js/app.js",
+		"/Users/dfed/Sites/precipNowIonic/platforms/android/project.properties",
+		"/Users/dfed/Sites/precipNowIonic/config.xml",
+		"/Users/dfed/Sites/precipNowIonic/www/css/style.css",
+		"/Users/dfed/Sites/precipNowIonic/bower_components/ngCordova/dist/ng-cordova.min.js",
+		"/Users/dfed/Sites/precipNowIonic/www/lib/ionic/version.json",
+		"/Users/dfed/Sites/precipNowIonic/plugins/cordova-plugin-geolocation/www/geolocation.js",
+		"/Users/dfed/Sites/precipNowIonic/www/css/weather-icons.css",
+		"/Users/dfed/Sites/precipNowIonic/iconInfo.txt",
+		"/Users/dfed/Sites/precipNowIonic/www/css/iconvault-weather.css",
+		"/Users/dfed/Sites/ionPrecip/www/js/app.js",
+		"/Users/dfed/Sites/ionPrecip/www/partials/precipDirective.html",
+		"/Users/dfed/Sites/ionPrecip/www/index.html",
+		"/Users/dfed/Downloads/mplsweatherprecip.json",
+		"/Users/dfed/Sites/ionPrecip/www/lib/ionic/version.json",
+		"/Users/dfed/Sites/ionPrecip/www/lib/ionic/css/ionic.css",
+		"/Users/dfed/Sites/ionPrecip/package.json",
+		"/Users/dfed/Sites/ionPrecip/gulpfile.js",
+		"/Users/dfed/Sites/ionPrecip/bower.json",
+		"/Users/dfed/Sites/precipnow/www/js/index.js",
+		"/Users/dfed/Sites/precipnow/www/css/index.css",
+		"/Users/dfed/Sites/precipnow/www/index.html",
+		"/Users/dfed/Sites/precipnow/plugins/cordova-plugin-whitelist/whitelist.js",
+		"/Users/dfed/Sites/precipnow/plugins/cordova-plugin-whitelist/src/android/WhitelistPlugin.java",
+		"/Users/dfed/Sites/precipnow/config.xml",
+		"/Users/dfed/Sites/precipnow/www/img/logo.png",
+		"/Users/dfed/Sites/leagueJS/gulpfile.js",
+		"/Users/dfed/Sites/leagueJS/server.js",
+		"/Users/dfed/Sites/leagueJS/package.json",
+		"/Users/dfed/Sites/simplestore/plugins/google-sheets/google-sheets.js",
+		"/Users/dfed/Sites/simplestore/index.html",
+		"/Users/dfed/Sites/simplestore/products.json",
+		"/Users/dfed/Sites/simplestore/js/config.js",
+		"/Users/dfed/Sites/simplestore/js/simpleStore.js",
+		"/Users/dfed/Sites/simplestore/plugins/google-sheets/DemoSpreadsheet.xlsx",
+		"/Users/dfed/Sites/simplestore/README.md",
+		"/Users/dfed/opensource/cmsjs/README.md",
+		"/Users/dfed/opensource/cmsjs/index.html",
+		"/Users/dfed/opensource/cmsjs/js/config.js",
+		"/Users/dfed/opensource/cmsjs/pages/about.md",
+		"/Users/dfed/opensource/cmsjs/bower.json",
+		"/Users/dfed/opensource/cmsjs/pages/.htaccess",
+		"/Users/dfed/opensource/cmsjs/js/marked.js",
+		"/Users/dfed/Sites/RandomWorld/gulpfile.js",
+		"/Users/dfed/Sites/RandomWorld/app/services/person.js",
+		"/Users/dfed/Sites/RandomWorld/views/layout.hbs",
+		"/Users/dfed/Sites/RandomWorld/public/stylesheets/style.scss",
+		"/Users/dfed/Sites/RandomWorld/views/index.hbs",
+		"/Users/dfed/Sites/RandomWorld/public/javascripts/viewmodels/personresult.js",
+		"/Users/dfed/Sites/RandomWorld/public/javascripts/viewmodels/generateform.js",
+		"/Users/dfed/Sites/RandomWorld/bin/www",
+		"/Users/dfed/Sites/RandomWorld/routes/users.js",
+		"/Users/dfed/Sites/RandomWorld/routes/index.js",
+		"/Users/dfed/Sites/RandomWorld/routes/api.js",
+		"/Users/dfed/Sites/RandomWorld/app/services/random.js",
+		"/Users/dfed/Sites/RandomWorld/package.json",
+		"/private/var/folders/02/w7wxcltd2rlg6wbtc45mjb3h0000gn/T/fz3temp-1/themestyles.css",
+		"/Users/dfed/Sites/localwp/wp-content/themes/Trina/css/themestyles.css",
+		"/Users/dfed/Downloads/loltracker/lol-tracker.php",
+		"/Users/dfed/Downloads/league-of-legends-rotation/wp-lol-rotation.php",
+		"/Users/dfed/Downloads/loltracker/public/js/lol-tracker-public.js",
+		"/Users/dfed/Downloads/loltracker/public/class-lol-tracker-public.php",
+		"/Users/dfed/Downloads/loltracker/index.php",
+		"/Users/dfed/Sites/gapapp/www/js/index.js",
+		"/Users/dfed/Sites/gapapp/www/index.html",
+		"/Users/dfed/Sites/gapapp/www/js/basic.js",
+		"/Users/dfed/league-ish/public/index.html",
+		"/Users/dfed/Sites/gapapp/www/css/index.css",
+		"/Users/dfed/league-ish/public/js/basic.js",
+		"/Users/dfed/league-ish/public/partials/combat.html",
+		"/Users/dfed/league-ish/public/partials/wards.html",
+		"/Users/dfed/league-ish/public/partials/spells.html",
+		"/Users/dfed/league-ish/public/partials/matchHistory.html",
+		"/Users/dfed/league-ish/public/js/basicControllers.js",
+		"/Users/dfed/league-ish/public/partials/home.html",
+		"/Users/dfed/Sites/directives-demo/code/src/app/components/dog/dog.service.js",
+		"/Users/dfed/Sites/directives-demo/code/src/app/components/helloWho/helloWho.template.html",
+		"/Users/dfed/Sites/directives-demo/code/src/app/components/helloWho/helloWho.directive.js",
+		"/Users/dfed/Sites/directives-demo/code/src/app/components/helloWho/helloWho.container.html",
+		"/Users/dfed/Sites/directives-demo/code/src/app/components/helloScope/helloScope.controller.js",
+		"/Users/dfed/Sites/directives-demo/code/src/app/components/helloScope/helloScope.container.html",
+		"/Users/dfed/Sites/directives-demo/code/src/app/components/helloScope/helloScope.directive.js",
+		"/Users/dfed/Sites/directives-demo/code/src/app/components/helloScope/helloScope.template.html",
+		"/Users/dfed/Sites/directives-demo/code/src/app/components/helloWorldTemplate/helloWorldTemplate.directive.js",
+		"/Users/dfed/Sites/directives-demo/code/src/app/components/helloWorldTemplate/helloWorld.template.html",
+		"/Users/dfed/Sites/directives-demo/code/src/app/components/helloWorldTemplate/helloWorld.directive.spec.js",
+		"/Users/dfed/Sites/directives-demo/code/src/app/components/helloWorldTemplate/helloWorld.container.html",
+		"/Users/dfed/Sites/directives-demo/code/src/app/components/helloWorld/helloWorld.directive.spec.js",
+		"/Users/dfed/Sites/directives-demo/code/src/app/components/helloWorld/helloWorld.container.html",
+		"/Users/dfed/Sites/directives-demo/code/src/app/components/helloWorld/helloWorld.directive.js",
+		"/Users/dfed/Sites/MidwestJs/public/javascripts/src/game.js",
+		"/Users/dfed/Sites/MidwestJs/routes/index.js",
+		"/Users/dfed/Sites/MidwestJs/app.js",
+		"/Users/dfed/Sites/MidwestJs/routes/examples.js",
+		"/Users/dfed/Sites/MidwestJs/public/javascripts/JSXTransformer.js",
+		"/Users/dfed/timesheet-midwestjs-workshop/client/assets/templates/app/employees/form.html",
+		"/Users/dfed/timesheet-midwestjs-workshop/client/src/app/resources.js",
+		"/Users/dfed/timesheet-midwestjs-workshop/client/src/app/projects/controllers.js",
+		"/Users/dfed/timesheet-midwestjs-workshop/client/src/app/timesheets/controllers.js",
+		"/Users/dfed/timesheet-midwestjs-workshop/client/src/app/timesheets/timesheets.js",
+		"/Users/dfed/timesheet-midwestjs-workshop/client/assets/templates/app/timesheets/index.html",
+		"/Users/dfed/timesheet-midwestjs-workshop/client/src/app/app.js",
+		"/Users/dfed/timesheet-midwestjs-workshop/client/src/app/controllers.js",
+		"/Users/dfed/timesheet-midwestjs-workshop/client/assets/templates/app/employees/index.html",
+		"/Users/dfed/timesheet-midwestjs-workshop/client/test/unit/app/employees/controllers.spec.js",
+		"/Users/dfed/timesheet-midwestjs-workshop/client/src/app/employees/employees.js",
+		"/Users/dfed/timesheet-midwestjs-workshop/client/src/app/employees/controllers.js",
+		"/Users/dfed/timesheet-midwestjs-workshop/client/assets/html/index.html",
+		"/Users/dfed/timesheet-midwestjs-workshop/api/src/routes/users.routes.js",
+		"/Users/dfed/timesheet-midwestjs-workshop/api/app/views/templates/scripts.jade",
+		"/Users/dfed/timesheet-midwestjs-workshop/api/server.js",
+		"/Users/dfed/timesheet-midwestjs-workshop/api/config/util.js",
+		"/Users/dfed/timesheet-midwestjs-workshop/api/config/properties.js",
+		"/Users/dfed/timesheet-midwestjs-workshop/client/src/main.js",
+		"/Users/dfed/timesheet-midwestjs-workshop/Gruntfile.js",
+		"/Users/dfed/timesheet-midwestjs-workshop/karma.config.js",
+		"/Users/dfed/timesheet-midwestjs-workshop/client/test/unit/app/controllers.spec.js",
+		"/Users/dfed/timesheet-midwestjs-workshop/client/assets/templates/index.html",
+		"/Users/dfed/league-ish/server.js",
+		"/Users/dfed/nodeAPI/express_test/public/js/basic.js",
+		"/Users/dfed/nodeAPI/express_test/public/index.html",
+		"/Users/dfed/nodeAPI/express_test/public/partials/matchHistory.html",
+		"/Users/dfed/nodeAPI/express_test/public/js/basicControllers.js",
+		"/Users/dfed/nodeAPI/express_test/public/partials/wards.html",
+		"/Users/dfed/nodeAPI/express_test/public/partials/match.html",
+		"/Users/dfed/nodeAPI/express_test/public/partials/spells.html",
+		"/Users/dfed/nodeAPI/express_test/public/partials/combat.html",
+		"/Users/dfed/nodeAPI/express_test/public/css/style.css"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/dfed/Sites/precipNowIonic",
+			"<current file>",
+			"/Users/dfed/Sites/simplestore",
+			"/Users/dfed/Sites/simplestore/js",
+			"/Users/dfed/Sites/localwp/wp-content/plugins/wonderplugin-gallery",
+			"footer.php"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"gap: plugin",
+			"gap:plugin",
+			"gap:",
+			"gap",
+			"before",
+			"{\n",
+			"568px",
+			"max-width: 568px",
+			"screen and (max-width: 568px)",
+			"#block-b39567adc97a4db5 div.entry-content p",
+			"b39567adc97a4db5",
+			"item-name",
+			"cartcontainer",
+			"simplecart_dec",
+			"columns",
+			"simplecart_items",
+			"sub-nav",
+			"opacity",
+			"gray",
+			"img",
+			"single-post",
+			"model",
+			"basicInit",
+			"itemJSON",
+			"_.where",
+			"freeCss=",
+			"display:block;visibility:visible",
+			"<a",
+			"html5gallery-container",
+			"html5gallery-container-1",
+			"style=\"display:block;visibility:",
+			"html5gallery-elem-img-1",
+			"wordpress gallery free version",
+			"wordpress gallery",
+			"sub-nav",
+			"menu-trina",
+			"static",
+			"opacity",
+			"img",
+			"menu-trina",
+			"height",
+			"img ",
+			"img",
+			"  padding-top: 60px;\n}\n.container .credit {\n  margin: 20px 0;\n}"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"after",
+			"img class=\"footer-icon\""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "www/js/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2938,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								440,
+								440
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "www/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1621,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								869,
+								869
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "www/partials/precipDirective.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 505,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								356,
+								356
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "platforms/android/AndroidManifest.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1594,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1594,
+								1594
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1366,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								646,
+								646
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "precipNow.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"config",
+				"config.xml"
+			],
+			[
+				"android",
+				"platforms/android/AndroidManifest.xml"
+			],
+			[
+				"precip",
+				"www/partials/precipDirective.html"
+			],
+			[
+				"index",
+				"index.html"
+			],
+			[
+				"random",
+				"app/services/random.js"
+			],
+			[
+				"person.js",
+				"app/services/person.js"
+			],
+			[
+				"css",
+				"www/css/index.css"
+			],
+			[
+				"resources",
+				"client/src/app/resources.js"
+			],
+			[
+				"header",
+				"header.php"
+			],
+			[
+				"footer",
+				"footer.php"
+			],
+			[
+				"sample",
+				"sample-page.php"
+			],
+			[
+				"footer.php",
+				"footer.php"
+			],
+			[
+				"functions",
+				"functions.php"
+			],
+			[
+				"header.php",
+				"header.php"
+			],
+			[
+				"event",
+				"events-page.php"
+			],
+			[
+				"function",
+				"functions.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 233.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
