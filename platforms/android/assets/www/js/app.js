@@ -3,24 +3,32 @@ angular.module('precip', ['ionic', 'ngCordova'])
     ionic.Platform.ready(function(){
     // will execute when device is ready, or immediately if the device is already ready.
       console.log("now ready");
-
-      // navigator.geolocation.getCurrentPosition(disp);
-
-      // function disp(pos) {
-      //   // $scope.lat = pos.coords.latitude;
-      //   // $scope.long = pos.coords.longitude;
-      //   console.log(pos.coords.latitude);
-      // }
-
-      $http.get('json/mplsweatherprecip.json')
+      // $http.get('json/mplsweatherprecip.json')
+      // $http.get('json/portlandrain.json')
+      $http.get('http://blooming-scrubland-10281.herokuapp.com/forecast/45.5200/-122.6819')
+      // $http.get('https://blooming-scrubland-10281.herokuapp.com/spring')
     // $http.get('json/mplsweather.json')
-      .success(function(data) {
-        // $scope.data = data.currently;
-        var rawdata = data.currently;
+
+      // .success(function(data) {
+      //   console.log(data.timezone);
+      //   var rawdata = data.currently;
+      //   preciplogic(rawdata);
+      //   precipiconlogic(rawdata);
+      // }).error(function() {
+      //   console.log("error");
+      // });
+      .then(function(data) {
+        console.log(data.data.timezone);
+        console.log('have entered the success function');
+        var rawdata = data.data.currently;
         preciplogic(rawdata);
         precipiconlogic(rawdata);
+      }, function(error) {
+        console.log(error + " err");
       });
+
       preciplogic = function (data) {
+        console.log('entered preciplogic');
         if (data.precipIntensity !== 0) {
           $scope.isPrecip = "YOU KNOW IT - " + data.precipType.toUpperCase();
           console.log("testing one");
@@ -46,15 +54,6 @@ angular.module('precip', ['ionic', 'ngCordova'])
             // $ionicLoading.hide();
             console.log(err);
         });
-        // navigator.geolocation.getCurrentPosition(disp);
-        // console.log("after navigator");
-
-        // function disp(pos) {
-        //   console.log('entered into disp function');
-        //   // $scope.lat = pos.coords.latitude;
-        //   // $scope.long = pos.coords.longitude;
-        //   console.log(pos.coords.latitude);
-        // }
       }
       precipiconlogic = function (data) {
         if (data.icon ===  "clear-day") {

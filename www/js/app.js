@@ -3,17 +3,18 @@ angular.module('precip', ['ionic', 'ngCordova'])
     ionic.Platform.ready(function(){
     // will execute when device is ready, or immediately if the device is already ready.
       console.log("now ready");
-      $http.get('json/mplsweatherprecip.json')
-    // $http.get('json/mplsweather.json')
-      .success(function(data) {
-        var rawdata = data.currently;
+      $http.get('http://blooming-scrubland-10281.herokuapp.com/forecast/45.5200/-122.6819')
+      .then(function(data) {
+        var rawdata = data.data.currently;
         preciplogic(rawdata);
         precipiconlogic(rawdata);
+      }, function(error) {
+        console.log(error + " err");
       });
+
       preciplogic = function (data) {
         if (data.precipIntensity !== 0) {
           $scope.isPrecip = "YOU KNOW IT - " + data.precipType.toUpperCase();
-          console.log("testing one");
         }
         else {
           $scope.isPrecip = "nahhhh, it's just " + data.summary.toLowerCase();
