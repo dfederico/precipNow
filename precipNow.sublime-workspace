@@ -96,7 +96,7 @@
 	"command_palette":
 	{
 		"height": 392.0,
-		"last_filter": "pack",
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -373,8 +373,8 @@
 						"selection":
 						[
 							[
-								440,
-								440
+								278,
+								282
 							]
 						],
 						"settings":
@@ -439,7 +439,8 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -629,12 +630,16 @@
 	},
 	"select_project":
 	{
-		"height": 0.0,
+		"height": 500.0,
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"",
+				"~/Sites/precipNowIonic/precipNow.sublime-project"
+			]
 		],
-		"width": 0.0
+		"width": 380.0
 	},
 	"select_symbol":
 	{
