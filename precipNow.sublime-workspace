@@ -51,7 +51,7 @@
 			"file": "www/js/app.js",
 			"settings":
 			{
-				"buffer_size": 3248,
+				"buffer_size": 2970,
 				"line_ending": "Unix"
 			}
 		},
@@ -80,10 +80,10 @@
 			}
 		},
 		{
-			"contents": "\n      // navigator.geolocation.getCurrentPosition(\n      //   function(position) {\n      //     // $scope.lat = position.coords.latitude;\n      //     // $scope.long = position.coords.longitude;\n      //     $scope.position = position;\n      //   },\n      //   function() {\n      //     $scope.position = \"it all failed\";\n      //   });\n\n\n\n// Ionic Starter App\n\n// angular.module is a global place for creating, registering and retrieving Angular modules\n// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)\n// the 2nd parameter is an array of 'requires'\n\n// angular.module('starter', ['ionic'])\n\n// .run(function($ionicPlatform) {\n//   $ionicPlatform.ready(function() {\n//     if(window.cordova && window.cordova.plugins.Keyboard) {\n//       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard\n//       // for form inputs)\n//       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);\n\n//       // Don't remove this line unless you know what you are doing. It stops the viewport\n//       // from snapping when text inputs are focused. Ionic handles this internally for\n//       // a much nicer keyboard experience.\n//       cordova.plugins.Keyboard.disableScroll(true);\n//     }\n//     if(window.StatusBar) {\n//       StatusBar.styleDefault();\n//     }\n//   });\n// })",
+			"contents": "\n      // navigator.geolocation.getCurrentPosition(\n      //   function(position) {\n      //     // $scope.lat = position.coords.latitude;\n      //     // $scope.long = position.coords.longitude;\n      //     $scope.position = position;\n      //   },\n      //   function() {\n      //     $scope.position = \"it all failed\";\n      //   });\n\n\n\n// Ionic Starter App\n\n// angular.module is a global place for creating, registering and retrieving Angular modules\n// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)\n// the 2nd parameter is an array of 'requires'\n\n// angular.module('starter', ['ionic'])\n\n// .run(function($ionicPlatform) {\n//   $ionicPlatform.ready(function() {\n//     if(window.cordova && window.cordova.plugins.Keyboard) {\n//       // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard\n//       // for form inputs)\n//       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);\n\n//       // Don't remove this line unless you know what you are doing. It stops the viewport\n//       // from snapping when text inputs are focused. Ionic handles this internally for\n//       // a much nicer keyboard experience.\n//       cordova.plugins.Keyboard.disableScroll(true);\n//     }\n//     if(window.StatusBar) {\n//       StatusBar.styleDefault();\n//     }\n//   });\n// })\n\n// test.results[0].address_components[1].long_name",
 			"settings":
 			{
-				"buffer_size": 1366,
+				"buffer_size": 1418,
 				"line_ending": "Unix"
 			}
 		}
@@ -366,15 +366,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3248,
+						"buffer_size": 2970,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								756,
-								756
+								278,
+								282
 							]
 						],
 						"settings":
@@ -484,15 +484,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1366,
+						"buffer_size": 1418,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								338,
-								338
+								339,
+								339
 							]
 						],
 						"settings":

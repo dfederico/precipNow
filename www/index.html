@@ -30,12 +30,23 @@
             <p>Avatar Spot</p>
           </div> -->
           <div class="item item-body">
-            <div precip-directive></div>
+            <!-- <div precip-directive></div> -->
+            <h1>Find out if it is precipitating</h1>
+            <div>
+              <button class="button button-royal">Use GPS</button>
+            </div>
+            <div>
+              <button class="button button-royal">Enter Zip</button>
+              <!-- <input type="number" min="5" max="5" placeholder="Zip Code"> -->
+              <form>
+                <input class="zip-input" type="text" placeholder="zip" name="zip" pattern="[0-9]{4}" >
+              </form>
+            </div>
           </div>
         </div>
-        <div class="bar bar-footer bar-royal">
+        <!-- <div class="bar bar-footer bar-royal">
           <div class="title">&copy; Dan Federico</div>
-        </div>
+        </div> -->
       </ion-content>
     </ion-pane>
   </body>
