@@ -18,8 +18,8 @@ angular.module('precip', ['ionic', 'ui.router', 'ngCordova'])
         })
         .state('locate', {
           url:'/geolocate',
-          controller: 'PrecipCtrl',
-          templateUrl: 'partials/precipDirective.html',
+          // controller: 'PrecipCtrl',
+          templateUrl: 'partials/dataDisplay.html',
           resolve: {
             item: function(ItemsService) {
               return ItemsService.getItem()

@@ -1,9 +1,8 @@
 angular.module('precip')
-	.controller('PrecipCtrl', function ($scope, $http, $cordovaGeolocation, item) {
+	.controller('PrecipCtrl', function ($scope, $http, $cordovaGeolocation) {
     ionic.Platform.ready(function(){
     // will execute when device is ready, or immediately if the device is already ready.
       console.log("now ready");
-      console.log(item);
       $http.get('http://blooming-scrubland-10281.herokuapp.com/forecast/45.5200/-122.6819')
       .then(function(data) {
         console.log("entered then");
