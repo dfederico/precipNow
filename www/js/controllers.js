@@ -1,10 +1,12 @@
 angular.module('precip')
-	.controller('PrecipCtrl', function ($scope, $http, $cordovaGeolocation) {
+	.controller('PrecipCtrl', function ($scope, $http, $cordovaGeolocation, item) {
     ionic.Platform.ready(function(){
     // will execute when device is ready, or immediately if the device is already ready.
       console.log("now ready");
+      console.log(item);
       $http.get('http://blooming-scrubland-10281.herokuapp.com/forecast/45.5200/-122.6819')
       .then(function(data) {
+        console.log("entered then");
         var rawdata = data.data.currently;
         preciplogic(rawdata);
         precipiconlogic(rawdata);
@@ -20,24 +22,24 @@ angular.module('precip')
           $scope.isPrecip = "nahhhh, it's just " + data.summary.toLowerCase();
         }
       }
-      $scope.clicker = function () {
-        console.log("clicker clicked");
+      // $scope.clicker = function () {
+      //   console.log("clicker clicked");
 
-        var posOptions = {
-          enableHighAccuracy: true,
-          timeout: 20000,
-          maximumAge: 0
-        };
+      //   var posOptions = {
+      //     enableHighAccuracy: true,
+      //     timeout: 20000,
+      //     maximumAge: 0
+      //   };
 
-        $cordovaGeolocation.getCurrentPosition(posOptions).then(function (position) {
-          var lat  = position.coords.latitude;
-          var long = position.coords.longitude;
-          console.log(lat, long);
-        }, function(err) {
-            // $ionicLoading.hide();
-            console.log(err);
-        });
-      }
+      //   $cordovaGeolocation.getCurrentPosition(posOptions).then(function (position) {
+      //     var lat  = position.coords.latitude;
+      //     var long = position.coords.longitude;
+      //     console.log(lat, long);
+      //   }, function(err) {
+      //       // $ionicLoading.hide();
+      //       console.log(err);
+      //   });
+      // }
       precipiconlogic = function (data) {
         if (data.icon ===  "clear-day") {
           $scope.icon = "wi-day-sunny";
