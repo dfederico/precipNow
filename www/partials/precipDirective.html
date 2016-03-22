@@ -1,12 +1,16 @@
-<div>	
-	<div class="precip-content">
-		<p class="location-para">YEAH THAT'S RIGHT, TOO LAZY TO SEE IF IT'S PRECIPITATIN' OUT THERE IN MINNEAPOLIS?</p>
-		<p class="location-para">WELL... IS IT?..</p>
-	</div>
-	<div class="precip-icon">
-		<i class="wi {{icon}}"></i>
-	</div>
-	<div class="precip-content">
-		<span>{{isPrecip}}</span>
-	</div>
+<div ng-hide="loaded">
+    <i class="fa fa-cog fa-spin loading-icon"></i>
+    IT'S ALL LOADING
+</div>
+<div ng-show="loaded">
+    <div class="precip-content">
+        <p class="location-para">YEAH THAT'S RIGHT, TOO LAZY TO SEE IF IT'S PRECIPITATIN' OUT THERE IN MINNEAPOLIS?</p>
+        <p class="location-para">WELL... IS IT?..</p>
+    </div>
+    <div class="precip-icon">
+        <i class="wi {{icon}}"></i>
+    </div>
+    <div class="precip-content">
+        <span>{{isPrecip}}</span>
+    </div>
 </div>

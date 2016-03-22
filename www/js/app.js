@@ -1,12 +1,12 @@
 angular.module('precip', ['ionic', 'ui.router', 'ngCordova'])
-    .directive('precipDirective', function() {
+    .directive('precipDirective', function () {
         return {
             templateUrl: 'partials/precipDirective.html',
             controller: 'PrecipCtrl'
         }
     })
     .config(['$stateProvider', '$urlRouterProvider',
-        function($stateProvider, $urlRouterProvider) {
+        function ($stateProvider, $urlRouterProvider) {
             $urlRouterProvider.otherwise('/');
             $stateProvider
                 .state('home', {
