@@ -1,5 +1,5 @@
 /* Empty. Add your own CSS if you like */
-span, p, div {
+span, p, div, a {
 	font-family:"Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
 }
 
@@ -26,6 +26,10 @@ p.location-para {
 .home-button {
 	display:block;
 	margin-top:25%;
+}
+.return-button {
+	display:block;
+	margin-top:30px;
 }
 .selector-title {
 	color:#886aea;

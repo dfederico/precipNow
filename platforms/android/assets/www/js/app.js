@@ -1,104 +1,24 @@
-angular.module('precip', ['ionic', 'ngCordova'])
-  .controller('PrecipCtrl', function($scope, $http, $cordovaGeolocation) {
-    ionic.Platform.ready(function(){
-    // will execute when device is ready, or immediately if the device is already ready.
-      console.log("now ready");
-      // $http.get('json/mplsweatherprecip.json')
-      // $http.get('json/portlandrain.json')
-      $http.get('http://blooming-scrubland-10281.herokuapp.com/forecast/45.5200/-122.6819')
-      // $http.get('https://blooming-scrubland-10281.herokuapp.com/spring')
-    // $http.get('json/mplsweather.json')
-
-      // .success(function(data) {
-      //   console.log(data.timezone);
-      //   var rawdata = data.currently;
-      //   preciplogic(rawdata);
-      //   precipiconlogic(rawdata);
-      // }).error(function() {
-      //   console.log("error");
-      // });
-      .then(function(data) {
-        console.log(data.data.timezone);
-        console.log('have entered the success function');
-        var rawdata = data.data.currently;
-        preciplogic(rawdata);
-        precipiconlogic(rawdata);
-      }, function(error) {
-        console.log(error + " err");
-      });
-
-      preciplogic = function (data) {
-        console.log('entered preciplogic');
-        if (data.precipIntensity !== 0) {
-          $scope.isPrecip = "YOU KNOW IT - " + data.precipType.toUpperCase();
-          console.log("testing one");
+angular.module('precip', ['ionic', 'ui.router', 'ngCordova'])
+    .directive('precipDirective', function () {
+        return {
+            templateUrl: 'partials/precipDirective.html',
+            controller: 'PrecipCtrl'
         }
-        else {
-          $scope.isPrecip = "nahhhh, it's just " + data.summary.toLowerCase();
+    })
+    .config(['$stateProvider', '$urlRouterProvider',
+        function ($stateProvider, $urlRouterProvider) {
+            $urlRouterProvider.otherwise('/');
+            $stateProvider
+                .state('home', {
+                    url: '/',
+                    templateUrl: 'partials/selector.html'
+                })
+                .state('locate', {
+                    url: '/geolocate',
+                    templateUrl: 'partials/dataDisplay.html'
+                })
         }
-      }
-      $scope.clicker = function () {
-        console.log("clicker clicked");
-
-        var posOptions = {
-          enableHighAccuracy: true,
-          timeout: 20000,
-          maximumAge: 0
-        };
-
-        $cordovaGeolocation.getCurrentPosition(posOptions).then(function (position) {
-          var lat  = position.coords.latitude;
-          var long = position.coords.longitude;
-          console.log(lat, long);
-        }, function(err) {
-            // $ionicLoading.hide();
-            console.log(err);
-        });
-      }
-      precipiconlogic = function (data) {
-        if (data.icon ===  "clear-day") {
-          $scope.icon = "wi-day-sunny";
-        }
-        else if (data.icon === "clear-night") {
-          $scope.icon = "wi-night-clear";
-        }
-        else if (data.icon === "rain") {
-          $scope.icon = "wi-day-rain";
-        }
-        else if (data.icon === "snow") {
-          $scope.icon = "wi-day-snow";
-        }
-        else if (data.icon === "sleet") {
-          $scope.icon = "wi-day-sleet";
-        }
-        else if (data.icon === "wind") {
-          $scope.icon = "wi-day-windy";
-        }
-        else if (data.icon === "fog") {
-          $scope.icon = "wi-day-fog";
-        }
-        else if (data.icon === "cloudy") {
-          $scope.icon = "wi-day-cloudy";
-        }
-        else if (data.icon === "partly-cloudy-day") {
-          $scope.icon = "wi-day-sunny-overcast";
-        }
-        else if (data.icon === "partly-cloudy-night") {
-          $scope.icon = "wi-night-alt-cloudy";
-        }
-        else {
-          $scope.icon = "wi-day-sunny";
-        }
-      }
-    });
-  })
-  .directive('precipDirective', function() {
-    return {
-      templateUrl: 'partials/precipDirective.html',
-      controller: 'PrecipCtrl'
-    }
-  });
-
+    ]);
 
 
 // clear-day   =>  wi-day-sunny

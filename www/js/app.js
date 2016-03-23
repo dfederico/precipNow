@@ -17,6 +17,10 @@ angular.module('precip', ['ionic', 'ui.router', 'ngCordova'])
                     url: '/geolocate',
                     templateUrl: 'partials/dataDisplay.html'
                 })
+                .state('returnHome', {
+                    url:'/',
+                    templateUrl: 'partials/selector.html'
+                })
         }
     ]);
 
