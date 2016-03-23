@@ -23,6 +23,24 @@ p.location-para {
 .card {
 	height:90%;
 }
+.home-button {
+	display:block;
+	margin-top:25%;
+}
+.selector-title {
+	color:#886aea;
+	text-align:center;
+	padding-top:25px;
+}
+.center-align {
+	text-align:center;
+}
+.precip-dir-body {
+	padding-top:50px;
+}
+.item, .item p {
+	color:#886aea;
+}
 /*.zip-input {
 	width:90%;
 	background-color:green;
