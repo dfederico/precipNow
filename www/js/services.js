@@ -41,4 +41,19 @@ angular.module('precip')
                 });
             // return deferred.promise;
         }
+    })
+    .service('ZipService', function ($http, $q, $state) {
+        this.getZipWeather = function (zip) {
+            return $http.get('addhere')
+                .then(function (data) {
+                    if (data.data === undefined) {
+                        $state.go('error');
+                    }
+                    else {
+                        return data.data.currently;
+                    }
+                }, function (error) {
+                    $state.go('error');
+                });
+        }
     });

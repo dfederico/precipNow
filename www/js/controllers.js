@@ -1,14 +1,7 @@
 angular.module('precip')
-    .controller('PrecipCtrl', function ($scope, $http, $cordovaGeolocation, WeatherService, GeoService, $state, $stateParams) {
+    .controller('PrecipCtrl', function ($scope, WeatherService, GeoService, $state, $stateParams) {
         ionic.Platform.ready(function () {
             // will execute when device is ready, or immediately if the device is already ready.
-
-            if ($stateParams.zip) {
-                useZip($stateParams.zip);
-            }
-            else {
-                useGeo();
-            }
 
             $scope.loaded = false;
             preciplogic = function (data) {
@@ -47,6 +40,12 @@ angular.module('precip')
                         console.log('geo service error');
                         $state.go('error');
                     });
+            }
+            if ($stateParams.zip) {
+                useZip($stateParams.zip);
+            }
+            else {
+                useGeo();
             }
             precipiconlogic = function (data) {
                 if (data.icon === "clear-day") {
