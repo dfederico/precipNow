@@ -22,16 +22,23 @@ angular.module('precip')
             return deferred.promise;
         }
     })
-    .service('WeatherService', function ($http, $q) {
-        var deferred = $q.defer();
+    .service('WeatherService', function ($http, $q, $state) {
+        // var deferred = $q.defer();
         this.getWeather = function (lat, lng) {
             // $http.get('http://blooming-scrubland-10281.herokuapp.com/forecast/45.5200/-122.6819')
-            $http.get('http://blooming-scrubland-10281.herokuapp.com/forecast/' + lat + '/' + lng)
+            return $http.get('http://blooming-scrubland-10281.herokuapp.com/forecast/' + lat + '/' + lng)
                 .then(function (data) {
-                    deferred.resolve(data.data.currently);
+                    if (data.data === undefined) {
+                        $state.go('error');
+                    }
+                    else {
+                        // deferred.resolve(data.data.currently);
+                        return data.data.currently;
+                    }
                 }, function (error) {
-                    deferred.reject(error);
+                    $state.go('error');
+                    // deferred.reject(error);
                 });
-            return deferred.promise;
+            // return deferred.promise;
         }
     });

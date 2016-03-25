@@ -13,13 +13,24 @@ angular.module('precip', ['ionic', 'ui.router', 'ngCordova'])
                     url: '/',
                     templateUrl: 'partials/selector.html'
                 })
-                .state('locate', {
+                .state('geolocateZip', {
+                    url: '/geolocateZip/:zip',
+                    templateUrl: 'partials/dataDisplay.html',
+                    controller: function($scope, $stateParams) {
+                        $scope.zip = $stateParams.zip;
+                    }
+                })
+                .state('geolocate', {
                     url: '/geolocate',
                     templateUrl: 'partials/dataDisplay.html'
                 })
-                .state('returnHome', {
-                    url:'/',
-                    templateUrl: 'partials/selector.html'
+                .state('error', {
+                    url: '/error',
+                    templateUrl: 'partials/error.html'
+                })
+                .state('zip', {
+                    url: '/zip',
+                    templateUrl: 'partials/zip.html'
                 })
         }
     ]);
