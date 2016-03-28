@@ -1,11 +1,16 @@
 <ionic-pane>
     <div class='list card'>
-        <div class="item item-body">
-            <h1 class="selector-title">Enter Zip Code</h1>
-            <label class="item item-input">
-                <input type="text" placeholder="Zip" ng-model="zip">
-            </label>
-            <a class="button button-royal home-button" href="#geolocateZip/{{zip}}">Submit</a>
-        </div>
+        <form name="zipForm">
+            <div class="item item-body">
+                <h1 class="selector-title">Enter Zip Code</h1>
+                <label class="item item-input">
+                    <input type="text" ng-class="{ error: zipForm.zip.$invalid && zipForm.zip.$dirty }" placeholder="Zip" ng-model="zip" name="zip" ng-pattern="/^(\d{5}(-\d{4})?|[A-Z]\d[A-Z] *\d[A-Z]\d)$/" required>
+                </label>
+                <a ng-disabled="zipForm.zip.$dirty && zipForm.zip.$invalid" class="button button-royal home-button" href="#geolocateZip/{{zip}}">Submit</a>
+            </div>
+        </form>
     </div>
 </ionic-pane>
+
+
+<!--ng-class="{ error: myForm.salt.$invalid }"-->

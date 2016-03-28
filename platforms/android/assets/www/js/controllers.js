@@ -1,5 +1,5 @@
 angular.module('precip')
-    .controller('PrecipCtrl', function ($scope, WeatherService, GeoService, $state, $stateParams) {
+    .controller('PrecipCtrl', function ($scope, WeatherService, GeoService, ZipService, $state, $stateParams) {
         ionic.Platform.ready(function () {
             // will execute when device is ready, or immediately if the device is already ready.
 
@@ -12,6 +12,37 @@ angular.module('precip')
                 }
             }
             useZip = function (zippage) {
+                ZipService.getZipWeather(zippage)
+                    .then(function (result) {
+                        // console.log(result);
+                        if (result !== undefined) {
+                            var formatted = result.formatted_address.substr(0, result.formatted_address.indexOf(','));
+                            $scope.city = " IN " + formatted.toUpperCase();
+                            $scope.coords = result.geometry.location;
+                            WeatherService.getWeather($scope.coords.lat, $scope.coords.lng)
+                                .then(function (result) {
+                                    if (result !== undefined) {
+                                        $scope.loaded = true;
+                                        $scope.weather = result;
+                                        preciplogic($scope.weather);
+                                        precipiconlogic($scope.weather);
+                                    }
+                                    else {
+                                        $state.go('error');
+                                    }
+
+                                }, function (error) {
+                                    console.log('weather service error');
+                                    $state.go('error');
+                                });
+                        }
+                        else {
+                            $state.go('error');
+                        }
+
+                    }, function (error) {
+                        $state.go('error');
+                    });
                 console.log('entered use zip ' + zippage);
             }
             useGeo = function () {

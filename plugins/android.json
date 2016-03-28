@@ -7,9 +7,6 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-console": {
-            "PACKAGE_NAME": "com.ionicframework.ionprecip948423"
-        },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "com.ionicframework.ionprecip948423"
         },
