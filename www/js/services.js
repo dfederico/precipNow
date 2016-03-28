@@ -44,13 +44,13 @@ angular.module('precip')
     })
     .service('ZipService', function ($http, $q, $state) {
         this.getZipWeather = function (zip) {
-            return $http.get('addhere')
+            return $http.get('http://blooming-scrubland-10281.herokuapp.com/gforecast/' + zip)
                 .then(function (data) {
                     if (data.data === undefined) {
                         $state.go('error');
                     }
                     else {
-                        return data.data.currently;
+                        return data.data.results[0];
                     }
                 }, function (error) {
                     $state.go('error');
